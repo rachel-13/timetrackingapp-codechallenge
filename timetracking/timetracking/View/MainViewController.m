@@ -36,8 +36,8 @@
 }
 
 -(void) buttonClicked: (UIButton*)sender {
-    UIViewController *vc = [DatePickerHostingController create] ;
-    [self presentViewController:vc animated:YES completion:nil];
+    UIViewController *vc = [DatePickerHostingController create];
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 
