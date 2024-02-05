@@ -8,18 +8,18 @@
 import SwiftUI
 
 struct DatePickerSwiftUIView: View {
-    @State private var birthDate = Date.now
+    @State private var selectedDate = Date.now
     
     var body: some View {
         VStack {
-            DatePicker(selection: $birthDate, in: ...Date.now) {
+            DatePicker(selection: $selectedDate, in: ...Date.now) {
                 Text("Pick a date and time")
             }
             .frame(alignment: .center)
             .padding()
             
             Button("Submit") {
-                print(birthDate)
+                print(selectedDate)
             }
             .padding()
         }
