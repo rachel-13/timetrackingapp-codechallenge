@@ -7,6 +7,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MainViewController.h"
+#import "timetracking-Swift.h"
 
 @interface MainViewController()
 
@@ -35,7 +36,8 @@
 }
 
 -(void) buttonClicked: (UIButton*)sender {
-    NSLog(@"start button clicked");
+    UIViewController *vc = [DatePickerHostingController create] ;
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 
