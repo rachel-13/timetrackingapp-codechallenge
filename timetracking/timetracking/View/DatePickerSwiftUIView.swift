@@ -20,7 +20,7 @@ struct DatePickerSwiftUIView: View {
             .padding()
             
             Button("Submit") {
-                print($viewModel.date)
+                viewModel.saveDate()
             }
             .padding()
         }.onAppear(perform: {
