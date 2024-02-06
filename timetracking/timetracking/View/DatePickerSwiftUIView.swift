@@ -8,24 +8,33 @@
 import SwiftUI
 
 struct DatePickerSwiftUIView: View {
+    
     @ObservedObject var viewModel: DatePickerViewModel
     
     var body: some View {
         VStack {
-            DatePicker(selection: $selectedDate, in: ...Date.now) {
+            DatePicker(selection: $viewModel.date, in: ...Date.now) {
                 Text("Pick a date and time")
             }
             .frame(alignment: .center)
             .padding()
             
             Button("Submit") {
-                print(selectedDate)
+                print($viewModel.date)
             }
             .padding()
-        }
+        }.onAppear(perform: {
+            viewModel.getDate()
+        })
     }
 }
 
 #Preview {
-    DatePickerSwiftUIView()
+    class MockCheckInService: CheckInTimeServiceProtocol {
+        func getCheckInTime(completionHandler: @escaping (String) -> Void) {
+            completionHandler("2023-12-01 06:45")
+        }
+    }
+    
+    return DatePickerSwiftUIView(viewModel: DatePickerViewModel(checkInTimeService: MockCheckInService()))
 }

@@ -11,7 +11,9 @@ import SwiftUI
 @objc class DatePickerHostingController: NSObject {
     
     @objc static func create() -> UIViewController {
-        let datepickerView = DatePickerSwiftUIView()
+        let service = CheckInTimeService(networkService: NetworkServiceImpl())
+        let viewModel = DatePickerViewModel(checkInTimeService: service)
+        let datepickerView = DatePickerSwiftUIView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: datepickerView)
         
         return hostingController

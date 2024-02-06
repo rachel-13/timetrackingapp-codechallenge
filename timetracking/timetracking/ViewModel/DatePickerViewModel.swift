@@ -8,21 +8,28 @@
 import Foundation
 import Combine
 
-protocol DatePickerViewModel {
-    var date: String { get }
-    func saveDate(date: String)
-    func getDate() -> String
-}
-
-class DatePickerViewModelImpl: ObservableObject, DatePickerViewModel {
+class DatePickerViewModel: ObservableObject {
     
-    @Published var date = ""
+    @Published var date: Date = Date.now
+    
+    let checkInTimeService: CheckInTimeServiceProtocol
+    
+    init(checkInTimeService: CheckInTimeServiceProtocol) {
+        self.checkInTimeService = checkInTimeService
+    }
     
     func saveDate(date: String) {
         
     }
     
-    func getDate() -> String {
-        return ""
+    func getDate(){
+        self.checkInTimeService.getCheckInTime { [weak self] dateString in
+            guard let self = self, let parsedDate = dateString.toDate() else {
+                return
+            }
+            DispatchQueue.main.async {
+                self.date = parsedDate
+            }
+        }
     }
 }

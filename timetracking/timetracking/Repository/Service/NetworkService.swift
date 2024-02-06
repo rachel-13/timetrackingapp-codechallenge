@@ -12,18 +12,19 @@ enum NetworkError: Error {
 }
 
 protocol NetworkService {
-    func getRequest(path: String, completionHandler: @escaping (Result<String, Error>) -> Void)
+    var mockedResponseData: Data? { get set }
+    func getRequest(path: String, completionHandler: @escaping (Result<Data, Error>) -> Void)
 }
 
 class NetworkServiceImpl: NetworkService {
     
     let baseURL = "https://some.api.com/"
-    var mockedJSONResponse: String?
+    var mockedResponseData: Data?
     
-    func getRequest(path: String, completionHandler: @escaping (Result<String, Error>) -> Void) {
+    func getRequest(path: String, completionHandler: @escaping (Result<Data, Error>) -> Void) {
         
         DispatchQueue.global(qos: .userInteractive).async {
-            if let response = self.mockedJSONResponse {
+            if let response = self.mockedResponseData{
                 completionHandler(.success(response))
             }
         }
