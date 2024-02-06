@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DatePickerSwiftUIView: View {
-    @State private var selectedDate = Date.now
+    @ObservedObject var viewModel: DatePickerViewModel
     
     var body: some View {
         VStack {
