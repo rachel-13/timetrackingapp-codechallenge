@@ -12,7 +12,8 @@ import SwiftUI
     
     @objc static func create() -> UIViewController {
         let service = CheckInTimeService(networkService: NetworkServiceImpl())
-        let viewModel = DatePickerViewModel(checkInTimeService: service)
+        let coreData = EmployeeCoreDataSourceImpl()
+        let viewModel = DatePickerViewModel(checkInTimeService: service, employeeCoreData: coreData)
         let datepickerView = DatePickerSwiftUIView(viewModel: viewModel)
         let hostingController = UIHostingController(rootView: datepickerView)
         

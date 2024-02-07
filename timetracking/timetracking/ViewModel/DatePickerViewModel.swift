@@ -7,17 +7,17 @@
 
 import Foundation
 import Combine
-import CoreData
 
 class DatePickerViewModel: ObservableObject {
     
     @Published var date: Date = Date.now
     
     let checkInTimeService: CheckInTimeServiceProtocol
-    let managedContext = CoreDataStack.shared.persistentContainer.viewContext
+    let employeeCoreData: EmployeeCoreDataProtocol
     
-    init(checkInTimeService: CheckInTimeServiceProtocol) {
+    init(checkInTimeService: CheckInTimeServiceProtocol, employeeCoreData: EmployeeCoreDataProtocol) {
         self.checkInTimeService = checkInTimeService
+        self.employeeCoreData = employeeCoreData
     }
     
     func saveDate() {
@@ -31,40 +31,11 @@ class DatePickerViewModel: ObservableObject {
         }
         
         let dateString = String(format: "%d-%02d-%02d %02d:%02d", year, month, day, hour, minute)
-        
-        let entity =  NSEntityDescription.entity(forEntityName: "Employee", in: managedContext)
-        let item = NSManagedObject(entity: entity!, insertInto: managedContext)
-        item.setValue(dateString, forKey: "check_in_date_time")
-        do {
-            try managedContext.save()
-        } catch _ {
-            print("Something went wrong.")
-        }
-        
-        
-    }
-    
-    func getDateFromCoreData() -> String? {
-        let fetchRequest = Employee.fetchRequest()
-        do {
-            let fetchedResults = try managedContext.fetch(fetchRequest)
-            let sortedResults = fetchedResults.sorted { lhs, rhs in
-                guard let lhsVal = lhs.check_in_date_time, let rhsVal = rhs.check_in_date_time else {
-                    return false
-                }
-                return lhsVal < rhsVal
-            }
-            let lastResult = sortedResults.last?.check_in_date_time
-            return lastResult
-        } catch let error as NSError {
-            print(error.description)
-        }
-        
-        return nil
+        employeeCoreData.saveRecord(with: dateString)
     }
     
     func getDate() {
-        guard let coreDataDateString = getDateFromCoreData(), let date = coreDataDateString.toDate() else {
+        guard let coreDataDateString = employeeCoreData.getRecord(), let date = coreDataDateString.toDate() else {
             getDateFromAPI()
             return
         }

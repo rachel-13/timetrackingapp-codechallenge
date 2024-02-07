@@ -36,5 +36,15 @@ struct DatePickerSwiftUIView: View {
         }
     }
     
-    return DatePickerSwiftUIView(viewModel: DatePickerViewModel(checkInTimeService: MockCheckInService()))
+    class MockCoreData: EmployeeCoreDataProtocol {
+        func saveRecord(with date: String) {
+            
+        }
+        
+        func getRecord() -> String? {
+            return "2023-12-01 07:45"
+        }
+    }
+    
+    return DatePickerSwiftUIView(viewModel: DatePickerViewModel(checkInTimeService: MockCheckInService(), employeeCoreData: MockCoreData()))
 }
