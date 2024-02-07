@@ -40,13 +40,21 @@ class DatePickerViewModel: ObservableObject {
         } catch _ {
             print("Something went wrong.")
         }
+        
+        
     }
     
     func getDateFromCoreData() -> String? {
-        let fetchRequest = NSFetchRequest<Employee>(entityName: "Employee")
+        let fetchRequest = Employee.fetchRequest()
         do {
             let fetchedResults = try managedContext.fetch(fetchRequest)
-            let lastResult = fetchedResults.last?.value(forKey: "check_in_date_time") as? String
+            let sortedResults = fetchedResults.sorted { lhs, rhs in
+                guard let lhsVal = lhs.check_in_date_time, let rhsVal = rhs.check_in_date_time else {
+                    return false
+                }
+                return lhsVal < rhsVal
+            }
+            let lastResult = sortedResults.last?.check_in_date_time
             return lastResult
         } catch let error as NSError {
             print(error.description)
