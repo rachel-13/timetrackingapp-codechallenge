@@ -1,0 +1,440 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5E012E942B71E94F0016CBA5 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5E012E922B71E94F0016CBA5 /* CoreData.xcdatamodeld */; };
+		5E012E962B71EA270016CBA5 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E012E952B71EA270016CBA5 /* CoreDataStack.swift */; };
+		5E012E992B71ECD30016CBA5 /* DatePickerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E012E982B71ECD30016CBA5 /* DatePickerViewModel.swift */; };
+		5E012E9B2B71EFB90016CBA5 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E012E9A2B71EFB90016CBA5 /* NetworkService.swift */; };
+		5E012E9F2B72078A0016CBA5 /* CheckInTimeAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E012E9E2B72078A0016CBA5 /* CheckInTimeAPI.swift */; };
+		5E012EA12B720D990016CBA5 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E012EA02B720D990016CBA5 /* Extensions.swift */; };
+		5E012EA32B720FCD0016CBA5 /* CheckInTime.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E012EA22B720FCD0016CBA5 /* CheckInTime.swift */; };
+		5E012EA92B732CD10016CBA5 /* EmployeeCoreDataProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E012EA82B732CD10016CBA5 /* EmployeeCoreDataProtocol.swift */; };
+		5E38E8102B70CE0E0063CD14 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38E80F2B70CE0E0063CD14 /* AppDelegate.swift */; };
+		5E38E8192B70CE0F0063CD14 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E38E8182B70CE0F0063CD14 /* Assets.xcassets */; };
+		5E38E8252B70D3530063CD14 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E38E8242B70D3530063CD14 /* MainViewController.m */; };
+		5E38E82B2B70EAC90063CD14 /* DatePickerSwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38E82A2B70EAC90063CD14 /* DatePickerSwiftUIView.swift */; };
+		5E38E82D2B70F28B0063CD14 /* DatePickerHostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E38E82C2B70F28B0063CD14 /* DatePickerHostingController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5E012E932B71E94F0016CBA5 /* Employee.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Employee.xcdatamodel; sourceTree = "<group>"; };
+		5E012E952B71EA270016CBA5 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
+		5E012E982B71ECD30016CBA5 /* DatePickerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerViewModel.swift; sourceTree = "<group>"; };
+		5E012E9A2B71EFB90016CBA5 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		5E012E9E2B72078A0016CBA5 /* CheckInTimeAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInTimeAPI.swift; sourceTree = "<group>"; };
+		5E012EA02B720D990016CBA5 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		5E012EA22B720FCD0016CBA5 /* CheckInTime.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckInTime.swift; sourceTree = "<group>"; };
+		5E012EA82B732CD10016CBA5 /* EmployeeCoreDataProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmployeeCoreDataProtocol.swift; sourceTree = "<group>"; };
+		5E38E80C2B70CE0E0063CD14 /* timetracking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = timetracking.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5E38E80F2B70CE0E0063CD14 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5E38E8182B70CE0F0063CD14 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5E38E81D2B70CE0F0063CD14 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E38E8232B70D3530063CD14 /* timetracking-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "timetracking-Bridging-Header.h"; sourceTree = "<group>"; };
+		5E38E8242B70D3530063CD14 /* MainViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		5E38E8262B70D44E0063CD14 /* MainViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		5E38E82A2B70EAC90063CD14 /* DatePickerSwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerSwiftUIView.swift; sourceTree = "<group>"; };
+		5E38E82C2B70F28B0063CD14 /* DatePickerHostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatePickerHostingController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5E38E8092B70CE0E0063CD14 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5E012E912B71E82F0016CBA5 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				5E012E922B71E94F0016CBA5 /* CoreData.xcdatamodeld */,
+				5E012E952B71EA270016CBA5 /* CoreDataStack.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		5E012E972B71ECB10016CBA5 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E012E982B71ECD30016CBA5 /* DatePickerViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		5E012E9C2B7206340016CBA5 /* Service */ = {
+			isa = PBXGroup;
+			children = (
+				5E012E9A2B71EFB90016CBA5 /* NetworkService.swift */,
+				5E012E9E2B72078A0016CBA5 /* CheckInTimeAPI.swift */,
+			);
+			path = Service;
+			sourceTree = "<group>";
+		};
+		5E012E9D2B7207600016CBA5 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				5E012E9C2B7206340016CBA5 /* Service */,
+				5E012E912B71E82F0016CBA5 /* CoreData */,
+				5E012EA82B732CD10016CBA5 /* EmployeeCoreDataProtocol.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		5E38E8032B70CE0E0063CD14 = {
+			isa = PBXGroup;
+			children = (
+				5E38E80E2B70CE0E0063CD14 /* timetracking */,
+				5E38E80D2B70CE0E0063CD14 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5E38E80D2B70CE0E0063CD14 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5E38E80C2B70CE0E0063CD14 /* timetracking.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5E38E80E2B70CE0E0063CD14 /* timetracking */ = {
+			isa = PBXGroup;
+			children = (
+				5E012E9D2B7207600016CBA5 /* Repository */,
+				5E38E8292B70E45D0063CD14 /* View */,
+				5E012E972B71ECB10016CBA5 /* ViewModel */,
+				5E012EA22B720FCD0016CBA5 /* CheckInTime.swift */,
+				5E38E80F2B70CE0E0063CD14 /* AppDelegate.swift */,
+				5E012EA02B720D990016CBA5 /* Extensions.swift */,
+				5E38E8232B70D3530063CD14 /* timetracking-Bridging-Header.h */,
+				5E38E8182B70CE0F0063CD14 /* Assets.xcassets */,
+				5E38E81D2B70CE0F0063CD14 /* Info.plist */,
+			);
+			path = timetracking;
+			sourceTree = "<group>";
+		};
+		5E38E8292B70E45D0063CD14 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E38E8262B70D44E0063CD14 /* MainViewController.h */,
+				5E38E8242B70D3530063CD14 /* MainViewController.m */,
+				5E38E82A2B70EAC90063CD14 /* DatePickerSwiftUIView.swift */,
+				5E38E82C2B70F28B0063CD14 /* DatePickerHostingController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5E38E80B2B70CE0E0063CD14 /* timetracking */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5E38E8202B70CE0F0063CD14 /* Build configuration list for PBXNativeTarget "timetracking" */;
+			buildPhases = (
+				5E38E8082B70CE0E0063CD14 /* Sources */,
+				5E38E8092B70CE0E0063CD14 /* Frameworks */,
+				5E38E80A2B70CE0E0063CD14 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = timetracking;
+			productName = timetracking;
+			productReference = 5E38E80C2B70CE0E0063CD14 /* timetracking.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5E38E8042B70CE0E0063CD14 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1520;
+				LastUpgradeCheck = 1520;
+				TargetAttributes = {
+					5E38E80B2B70CE0E0063CD14 = {
+						CreatedOnToolsVersion = 15.2;
+						LastSwiftMigration = 1520;
+					};
+				};
+			};
+			buildConfigurationList = 5E38E8072B70CE0E0063CD14 /* Build configuration list for PBXProject "timetracking" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5E38E8032B70CE0E0063CD14;
+			productRefGroup = 5E38E80D2B70CE0E0063CD14 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5E38E80B2B70CE0E0063CD14 /* timetracking */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5E38E80A2B70CE0E0063CD14 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E38E8192B70CE0F0063CD14 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5E38E8082B70CE0E0063CD14 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5E38E82B2B70EAC90063CD14 /* DatePickerSwiftUIView.swift in Sources */,
+				5E012EA12B720D990016CBA5 /* Extensions.swift in Sources */,
+				5E012E942B71E94F0016CBA5 /* CoreData.xcdatamodeld in Sources */,
+				5E012E9B2B71EFB90016CBA5 /* NetworkService.swift in Sources */,
+				5E38E8102B70CE0E0063CD14 /* AppDelegate.swift in Sources */,
+				5E012E9F2B72078A0016CBA5 /* CheckInTimeAPI.swift in Sources */,
+				5E012E962B71EA270016CBA5 /* CoreDataStack.swift in Sources */,
+				5E012EA32B720FCD0016CBA5 /* CheckInTime.swift in Sources */,
+				5E012E992B71ECD30016CBA5 /* DatePickerViewModel.swift in Sources */,
+				5E38E82D2B70F28B0063CD14 /* DatePickerHostingController.swift in Sources */,
+				5E38E8252B70D3530063CD14 /* MainViewController.m in Sources */,
+				5E012EA92B732CD10016CBA5 /* EmployeeCoreDataProtocol.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		5E38E81E2B70CE0F0063CD14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5E38E81F2B70CE0F0063CD14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.2;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5E38E8212B70CE0F0063CD14 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8NM54NQ7DU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = timetracking/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = MainViewController.h;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelfong.timetracking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "timetracking/timetracking-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5E38E8222B70CE0F0063CD14 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8NM54NQ7DU;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = timetracking/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = MainViewController.h;
+				INFOPLIST_KEY_UIMainStoryboardFile = "";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.rachelfong.timetracking;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "timetracking/timetracking-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5E38E8072B70CE0E0063CD14 /* Build configuration list for PBXProject "timetracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E38E81E2B70CE0F0063CD14 /* Debug */,
+				5E38E81F2B70CE0F0063CD14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5E38E8202B70CE0F0063CD14 /* Build configuration list for PBXNativeTarget "timetracking" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5E38E8212B70CE0F0063CD14 /* Debug */,
+				5E38E8222B70CE0F0063CD14 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		5E012E922B71E94F0016CBA5 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				5E012E932B71E94F0016CBA5 /* Employee.xcdatamodel */,
+			);
+			currentVersion = 5E012E932B71E94F0016CBA5 /* Employee.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 5E38E8042B70CE0E0063CD14 /* Project object */;
+}
